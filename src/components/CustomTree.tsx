@@ -35,7 +35,7 @@ const CustomTree: FC<CustomTreeProps> = ({data, newChildValue}) => {
     const pathClassFunc: PathClassFunction = (link) => { 
       const parent = Number(link.source.data.name)
       const child = Number(link.target.data.name)
-      if (child > parent){
+      if (child >= parent){
         return 'left-branch'
       }
 
